@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# Lists all documents in a collection
+"""Lists all documents in a collection."""
 
 
 def list_all(mongo_collection):
@@ -13,4 +13,4 @@ def list_all(mongo_collection):
             A list of all documents in the collection. Returns
             an empty list if no document is found.
     """
-        return list(mongo_collection.find())
+    return [doc for doc in mongo_collection.find()]
