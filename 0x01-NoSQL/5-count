@@ -1,0 +1,2 @@
+// Displays the number of documents in the colection "school".
+db.school.find().count()

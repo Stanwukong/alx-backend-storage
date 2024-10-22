@@ -1,0 +1,5 @@
+#!/bin/bash
+# Creates, opens, and grants execution rights to a file
+touch $1
+chmod +x $1
+vi $1
