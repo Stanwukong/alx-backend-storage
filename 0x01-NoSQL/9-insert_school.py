@@ -1,3 +1,7 @@
+#!/usr/bin python3
+"""Adds a new document based on input"""
+
+
 def insert_school(mongo_collection, **kwargs):
     """
     Inserts a new document into a collection based
