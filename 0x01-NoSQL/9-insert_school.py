@@ -1,20 +1,10 @@
-#!/usr/bin python3
-"""Adds a new document based on input"""
+#!/usr/bin/env python3
+'''Task 9's module.
+'''
 
 
 def insert_school(mongo_collection, **kwargs):
-    """
-    Inserts a new document into a collection based
-    on keyword arguments (kwargs).
-
-    Args:
-        mongo_collection: The pymongo collection object.
-        **kwargs: The keyword arguments representing the
-                  fields and values for the new document.
-
-    Returns:
-        The _id of the newly inserted document.
-    """
+    '''Inserts a new document in a collection.
+    '''
     result = mongo_collection.insert_one(kwargs)
-
     return result.inserted_id
