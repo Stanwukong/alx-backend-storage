@@ -1,0 +1,4 @@
+#!/bin/bash
+# Lists all databses in MongoDB in simplified format.
+
+mongo --eval "db.adminCommand('listDatabases').databases.forEach(db => print(db.name + '\t' + (db.sizeOnDisk / (1024 * 1024)).toFixed(3) + 'GB'))"
