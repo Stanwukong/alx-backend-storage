@@ -1,2 +1,2 @@
-# Lists all databses in MongoDB in simplified format.
+// Lists all databses in MongoDB in simplified format.
 show dbs;
