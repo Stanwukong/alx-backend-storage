@@ -1,0 +1,4 @@
+#!/bin/bash
+# Create and modifies permission for file.
+vim $1
+chmod +x $1
