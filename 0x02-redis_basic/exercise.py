@@ -23,3 +23,24 @@ class Cache:
         self._redis.set(key, data)
 
         return key
+
+     def get(self, 
+             key: str, 
+             fn: Callable = None
+             ) -> Union[str, bytes, int, float, None]:
+        """Retrieve data from Redis and apply a conversion
+            function.
+        """
+        value = self._redis.get(key)
+        if value is None:
+            return None
+
+        return fn(value) if fn else value
+
+    def get_str(self, key) -> str:
+        """Retrieve a string valie from Redis."""
+        return self.get(key, lambda d: d:decode("utf-8"))
+
+    def get_int(self, key: str) -> int:
+        """Retrieve an integer values from Redis."""
+        return self.get(key, lambda x: int(x))
